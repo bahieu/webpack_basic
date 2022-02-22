@@ -2,17 +2,17 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: {
-    index: './src/index.js',
-    home: './src/home.js'
+    index: "./src/index.js",
+    home: "./src/home.js",
   },
   output: {
-    filename: '[name].js',
+    filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
   mode: "development",
   devServer: {
-    open: true   
+    open: true,
   },
   module: {
     rules: [
@@ -20,23 +20,27 @@ module.exports = {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env']
-          }
-        }
-      }
-    ]
+            presets: ["@babel/preset-env"],
+          },
+        },
+      },   
+      {
+        test: /\.scss$/i,
+        use: ["style-loader", "css-loader", "sass-loader" ],
+      },   
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Webpack with Ba Hieu',
-      filename: 'index.html',
+      title: "Webpack with Ba Hieu",
+      filename: "index.html",
     }),
-  ], 
-   optimization: {
-     splitChunks: {
-       chunks: 'all'
-     }
-   } 
+  ],
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+    },
+  },
 };
