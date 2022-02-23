@@ -2,8 +2,11 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: {
-    index: "./src/index.js",
-    home: "./src/home.js",
+    main: [
+      './src/index.js',
+      './src/styles.css'
+    ]
+
   },
   output: {
     filename: "[name].js",
@@ -27,8 +30,8 @@ module.exports = {
         },
       },   
       {
-        test: /\.scss$/i,
-        use: ["style-loader", "css-loader", "sass-loader" ],
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       },   
     ],
   },

@@ -110,3 +110,37 @@
 
 - https://webpack.js.org/concepts/
 - https://www.youtube.com/watch?v=145Po5_r0e4&list=PLWMM2vKkNM5gpiq7YKFOqqBIkvXzfIHu6
+
+-----------------------------------------------------------------------------------
+
+
+# Loader:
+<ul>
+<li> Babel loader:
+<ul>
+<li> Được dùng để chuyển đổi mã lệnh JS được viết dựa trên tiêu chuẩn ECMAScript phiên bản mới về phiên bản cũ hơn để tương thích với hầu hết các trình duyệt.
+</ul>
+<li> Style loader:
+<ul>
+<li> Giúp chúng ta Inject CSS into the DOM xác định vị trí chèn css vào html bằng JS
+<li> Để sử dụng ta phải cài đặt thông qua npm và nên kết hợp với css-loader
+</ul>
+<li> Css loader:
+<ul>
+<li> Giúp giải quyết vấn đề khi import các tài nguyên như hình ảnh, font ở trong file css
+<li> Nên kết hợp cùng với style-loader
+</ul>
+<li> Sass loader:
+<ul>
+<li> Giúp chúng ta compile file scss sang css
+<li> Để sử dụng ta phải cài đặt thông qua npm
+</ul>
+</ul>
+
+## Tài liệu tham khảo:
+
+- https://webpack.js.org/loaders/babel-loader/
+- https://webpack.js.org/loaders/style-loader/
+- https://webpack.js.org/loaders/css-loader/
+- https://webpack.js.org/loaders/sass-loader/
+- https://viblo.asia/p/webpack-tu-a-den-a-webpack-babel-loader-WAyK87o65xX
