@@ -2,7 +2,7 @@ import _ from 'lodash';
 import { sayHello } from './libs/hello';
 import { sum } from './libs/sum';
 import './libs/other';
-import './libs/styles.scss';
+import '../src/styles.css'
 
 console.log('Ba Hieu' );
 console.log(sum(5,4));
